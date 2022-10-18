@@ -18,10 +18,10 @@ public class mouse {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 	
-		//driver.switchTo().frame(0);
+		driver.switchTo().frame(0);
 		Actions action = new Actions(driver);
 		action.clickAndHold(driver.findElement(By.xpath("//*[@id=\"draggable\"]"))).moveToElement(driver.findElement(By.xpath("//*[@id=\"droppable\"]"))).release().build().perform();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		driver.close();
 		
 
